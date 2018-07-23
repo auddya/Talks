@@ -1,0 +1,339 @@
+\documentclass[compress,red, 9pt, t]{beamer}
+\mode<presentation>
+%\usetheme{Singapore}
+%\hypersetup{pdfpagemode=FullScreen}
+\useoutertheme[subsection=false]{smoothbars}
+ 
+% include packages
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{psfrag}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[all,knot]{xy}
+\xyoption{arc}
+\usepackage{url}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{setspace}
+\setbeamersize{text margin left=4mm, text margin right=3mm}
+%My Packages
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+%\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{rotating}
+\usepackage{textpos}
+\usepackage{captdef}
+%---------------------------------------------------------
+%               Bold Face Math Characters:
+%               All In Format: \B***** .
+%---------------------------------------------------------
+\def\BGamma{\mbox{\boldmath$\partial\Omega$}}
+\def\BDelta{\mbox{\boldmath$\Delta$}}
+\def\BTheta{\mbox{\boldmath$\Theta$}}
+\def\BLambda{\mbox{\boldmath$\Lambda$}}
+\def\BXi{\mbox{\boldmath$\Xi$}}
+\def\BPi{\mbox{\boldmath$\Pi$}}
+\def\BSigma{\mbox{\boldmath$\Sigma$}}
+\def\BUpsilon{\mbox{\boldmath$\Upsilon$}}
+\def\BPhi{\mbox{\boldmath$\Phi$}}
+\def\BPsi{\mbox{\boldmath$\Psi$}}
+\def\BOmega{\mbox{\boldmath$\Omega$}}
+\def\Balpha{\mbox{\boldmath$\alpha$}}
+\def\Bbeta{\mbox{\boldmath$\beta$}}
+\def\Bgamma{\mbox{\boldmath$\gamma$}}
+\def\Bdelta{\mbox{\boldmath$\delta$}}
+\def\Bepsilon{\mbox{\boldmath$\epsilon$}}
+\def\Bzeta{\mbox{\boldmath$\zeta$}}
+\def\Beta{\mbox{\boldmath$\eta$}}
+\def\Btheta{\mbox{\boldmath$\theta$}}
+\def\Biota{\mbox{\boldmath$\iota$}}
+\def\Bkappa{\mbox{\boldmath$\kappa$}}
+\def\Blambda{\mbox{\boldmath$\lambda$}}
+\def\Bmu{\mbox{\boldmath$\mu$}}
+\def\Bnu{\mbox{\boldmath$\nu$}}
+\def\Bxi{\mbox{\boldmath$\xi$}}
+\def\Bpi{\mbox{\boldmath$\pi$}}
+\def\Brho{\mbox{\boldmath$\rho$}}
+\def\Bsigma{\mbox{\boldmath$\sigma$}}
+\def\Btau{\mbox{\boldmath$\tau$}}
+\def\Bupsilon{\mbox{\boldmath$\upsilon$}}
+\def\Bphi{\mbox{\boldmath$\phi$}}
+\def\Bchi{\mbox{\boldmath$\chi$}}
+\def\Bpsi{\mbox{\boldmath$\psi$}}
+\def\Bomega{\mbox{\boldmath$\omega$}}
+\def\Bvarepsilon{\mbox{\boldmath$\varepsilon$}}
+\def\Bvartheta{\mbox{\boldmath$\vartheta$}}
+\def\Bvarpi{\mbox{\boldmath$\varpi$}}
+\def\Bvarrho{\mbox{\boldmath$\varrho$}}
+\def\Bvarsigma{\mbox{\boldmath$\varsigma$}}
+\def\Bvarphi{\mbox{\boldmath$\varphi$}}
+\def\bone{\mbox{\boldmath$1$}}
+\def\bzero{\mbox{\boldmath$0$}}
+%---------------------------------------------------------
+%               Bold Face Math Italic:
+%               All In Format: \b* .
+%---------------------------------------------------------
+\def\bA{\mbox{\boldmath$ A$}}
+\def\bB{\mbox{\boldmath$ B$}}
+\def\bC{\mbox{\boldmath$ C$}}
+\def\bD{\mbox{\boldmath$ D$}}
+\def\bE{\mbox{\boldmath$ E$}}
+\def\bF{\mbox{\boldmath$ F$}}
+\def\bG{\mbox{\boldmath$ G$}}
+\def\bH{\mbox{\boldmath$ H$}}
+\def\bI{\mbox{\boldmath$ I$}}
+\def\bJ{\mbox{\boldmath$ J$}}
+\def\bK{\mbox{\boldmath$ K$}}
+\def\bL{\mbox{\boldmath$ L$}}
+\def\bM{\mbox{\boldmath$ M$}}
+\def\bN{\mbox{\boldmath$ N$}}
+\def\bO{\mbox{\boldmath$ O$}}
+\def\bP{\mbox{\boldmath$ P$}}
+\def\bQ{\mbox{\boldmath$ Q$}}
+\def\bR{\mbox{\boldmath$ R$}}
+\def\bS{\mbox{\boldmath$ S$}}
+\def\bT{\mbox{\boldmath$ T$}}
+\def\bU{\mbox{\boldmath$ U$}}
+\def\bV{\mbox{\boldmath$ V$}}
+\def\bW{\mbox{\boldmath$ W$}}
+\def\bX{\mbox{\boldmath$ X$}}
+\def\bY{\mbox{\boldmath$ Y$}}
+\def\bZ{\mbox{\boldmath$ Z$}}
+\def\ba{\mbox{\boldmath$ a$}}
+\def\bb{\mbox{\boldmath$ b$}}
+\def\bc{\mbox{\boldmath$ c$}}
+\def\bd{\mbox{\boldmath$ d$}}
+\def\be{\mbox{\boldmath$ e$}}
+\def\bff{\mbox{\boldmath$ f$}}
+\def\bg{\mbox{\boldmath$ g$}}
+\def\bh{\mbox{\boldmath$ h$}}
+\def\bi{\mbox{\boldmath$ i$}}
+\def\bj{\mbox{\boldmath$ j$}}
+\def\bk{\mbox{\boldmath$ k$}}
+\def\bl{\mbox{\boldmath$ l$}}
+\def\bm{\mbox{\boldmath$ m$}}
+\def\bn{\mbox{\boldmath$ n$}}
+\def\bo{\mbox{\boldmath$ o$}}
+\def\bp{\mbox{\boldmath$ p$}}
+\def\bq{\mbox{\boldmath$ q$}}
+\def\br{\mbox{\boldmath$ r$}}
+\def\bs{\mbox{\boldmath$ s$}}
+\def\bt{\mbox{\boldmath$ t$}}
+\def\bu{\mbox{\boldmath$ u$}}
+\def\bv{\mbox{\boldmath$ v$}}
+\def\bw{\mbox{\boldmath$ w$}}
+\def\bx{\mbox{\boldmath$ x$}}
+\def\by{\mbox{\boldmath$ y$}}
+\def\bz{\mbox{\boldmath$ z$}}
+%----------------------------------------
+\title{\LARGE A Diffuse Interface Framework for Modeling the Evolution of Multi-cell Aggregates as a Soft Packing Problem}
+\subtitle{}
+
+\author{S. Rudraraju$^1$ ,J. Jiang$^2$ , D.  Auddya$^1$ ,T. Topal$^2$ ,L. V. Diaz$^3$ , K. Garikipati$^2$
+\\ \vspace{0.2in}
+$^1$ University of Wisconsin Madison\\ \vspace{0.1in}
+$^2$ University of Michigan Ann Arbor\\ \vspace{0.1in}
+$^3$ Oakland University, Michigan
+ %\includegraphics[height=0.35\textheight]{figures/simulations/reflectedShellZoom2.png}
+ }
+\date{WCCM 2018\\ \vspace{.10cm} New York,  July 25, 2018}
+%\author[The author]{\includegraphics[height=1cm,width=2cm]{figures/reflectedShellZoom.png}\\The Author}
+
+%start the show
+\begin{document}
+
+\frame{\titlepage}
+ 
+ %Slide
+\frame{
+\frametitle{Soft packing problem: Overview}
+\begin{itemize} 
+\item Motivation \vspace{0.025in}
+\begin{itemize} \vspace{0.025in}
+\item Embroyogenesis \vspace{0.05in}
+\item Tumor growth \vspace{0.025in}
+\end{itemize}  \vspace{0.025in}
+\item Previous models\vspace{0.025in}
+\begin{itemize}
+\item Vertex based, cell based, cellular automata. \vspace{0.025in}
+\end{itemize}  \vspace{0.025in}
+\item Phase field formulation of soft packing \vspace{0.05in}
+\item Mechanics of soft packing \vspace{0.05in}
+\item Material models \vspace{0.05in}
+\item Summary
+\end{itemize}
+} 
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iffalse
+
+\frame{
+  \frametitle{Growth driven by translating/revolving characteristic generating curves}
+  \begin{figure}[hbt]
+       \begin{center}
+       \includegraphics[width=\textwidth]{figures/baseGeometries.eps}{}
+       \end{center}
+   \end{figure}
+}
+
+
+\frame{
+  \frametitle{Structural foundations of shell surface: Mantle and Periostracum}
+  \begin{figure}[hbt]
+       \begin{center}
+          \includegraphics[width=\textwidth]{figures/MandPMacroScale.jpg}{}
+       \end{center}
+   \end{figure}
+}
+
+
+\frame{
+  \frametitle{Distinct growth modes driven by Mantle and Periostracum}
+  \begin{figure}[hbt]
+       \begin{center}
+          \includegraphics[width=0.8\textwidth]{figures/MandPClassification.eps}{}
+       \end{center}
+   \end{figure}
+}
+
+
+\frame{
+  \frametitle{Modeling evolving fronts by accretive growth}
+  \centering $\bF=\bF^{e} \bF^{g}$
+  \vspace{0.1in}
+    \begin{figure}[hbt]
+       \begin{center}
+          \includegraphics[width=0.4\textwidth]{figures/fronts2.eps}{}
+       \end{center}
+   \end{figure}
+    \href{run:movies/accretiveGrowth.mp4}{\small Accretive growth}
+}
+
+
+\frame{
+  \frametitle{Mantle driven growth: Effect of base geometry - Flat plate}
+.\\[-7mm]
+\begin{tabular}{c@{}c@{}c}
+ \includegraphics[width=0.35\textwidth]{figures/simulations/flatPlateZ0p65}
+&\includegraphics[width=0.35\textwidth]{figures/simulations/flatPlateZ0}
+& \includegraphics[width=0.25\textwidth]{figures/frontFlat.eps} \\[-5mm]
+  \href{run:movies/flatPlateZ0p65.mp4}{\textit{0.5t}} &  \href{run:movies/flatPlateZ0.mp4}{\textit{t}} &\\
+ \includegraphics[width=0.35\textwidth]{figures/simulations/flatPlateZ2}
+&\includegraphics[width=0.35\textwidth]{figures/simulations/flatPlateZ4} &\\[-5mm]
+\href{run:movies/flatPlateZ2.mp4}{\textit{2t}}  & \href{run:movies/flatPlateZ4.mp4}{\textit{4t}} &
+\end{tabular}
+}
+
+\frame{
+  \frametitle{Mantle driven growth: Effect of base geometry - Arc}
+.\\[-7mm]
+\begin{tabular}{c@{}c@{}c}
+ \includegraphics[width=0.35\textwidth]{figures/simulations/arcZ0p5}
+&\includegraphics[width=0.35\textwidth]{figures/simulations/arcZ0}
+& \includegraphics[width=0.15\textwidth]{figures/arcModels.eps} \\[-2mm]
+  {0.5t} &  {t} &  \href{run:movies/arc.mp4}{\tiny [\textit{Arc front growth}]}  \\
+ \includegraphics[width=0.35\textwidth]{figures/simulations/arcZ2}
+&\includegraphics[width=0.35\textwidth]{figures/simulations/arcZ4} &\\[-5mm]
+{2t}  & {4t} &
+\end{tabular}
+}
+
+\frame{
+  \frametitle{Mantle driven growth: Effect of base geometry - Spline}
+.\\[-7mm]
+\centering
+\begin{tabular}{c@{}c@{}c}
+ \includegraphics[height=0.4\textheight]{figures/simulations/splineZ0p5}
+&\includegraphics[height=0.4\textheight]{figures/simulations/splineZ0p9}
+& \includegraphics[width=0.25\textwidth]{figures/splineModels.eps} \\[-2mm]
+ \href{run:movies/splineZ0p5.mp4}{\textit{0.5t}} &  \href{run:movies/splineZ0p9.mp4}{\textit{t}} &\\
+ \includegraphics[height=0.4\textheight]{figures/simulations/splineZ2}
+&\includegraphics[height=0.4\textheight]{figures/simulations/splineZ4} &\\[-5mm]
+\href{run:movies/splineZ2.mp4}{\textit{2t}}  & \href{run:movies/splineZ4.mp4}{\textit{4t}} &
+\end{tabular}
+}
+
+
+\frame{
+  \frametitle{Hierarchical buckling}
+  \begin{figure}[hbt]
+       \begin{center}
+          \includegraphics[width=0.95\textwidth]{figures/simulations/hierarchical.eps}{}
+       \end{center}
+   \end{figure}
+}
+
+\frame{
+  \frametitle{Folding back}
+  \begin{figure}[hbt]
+       \begin{center} 
+          \includegraphics[width=0.9\textwidth]{figures/simulations/foldingBack.eps}{}
+       \end{center}
+   \end{figure}
+  \hspace{1.5cm}  \href{run:movies/foldback2.mp4}{\small \textit{Distributed growth}} \hspace{1.6cm}  \href{run:movies/foldback1.mp4}{\small \textit{Localized growth}} 
+   }
+
+\frame{
+  \frametitle{Periostracum driven growth}
+\begin{tabular}{c@{}c@{}c}
+ \includegraphics[width=0.3\textwidth]{figures/simulations/barrel1}
+&\includegraphics[width=0.3\textwidth]{figures/simulations/barrel2}
+& \includegraphics[width=0.3\textwidth]{figures/simulations/barrel.eps} \\[-2mm]
+ \href{run:movies/barrel1.mp4}{\textit{t}} &  \href{run:movies/barrel2.mp4}{\textit{2t}} &
+\end{tabular}
+\vspace{0.25in}\\
+ \href{run:movies/eigenBarrelNoMesh.mp4}{\small \textit{[Eigen modes]}} 
+}
+
+\frame{
+  \frametitle{Modeling coupled Mantle and Periostracum modes (ongoing)}
+  \begin{figure}[hbt]
+       \begin{center}
+          \includegraphics[width=0.55\textwidth]{figures/shellOnSolid.eps}{}
+       \end{center}
+   \end{figure}
+}
+
+\frame{
+  \frametitle{Modeling coupled Mantle and Periostracum modes (ongoing)}
+  Shell kinematics (Kirchhoff-Love): Given a point $\br$ on the mid-surface and tangent base vectors $\ba_{\alpha}$(=$\br_{,\alpha}$), we have\\
+ \begin{align*} 
+ a_{\alpha \beta} &= \ba_{\alpha} \cdot \ba_{\beta} \qquad \qquad (\text{first fundamental form})\\
+ b_{\alpha \beta} &= {\ba_{\alpha,\beta}} \cdot \ba_{3}  \qquad \qquad (\text{second fundamental form})
+\end{align*}
+Now the membrane strain and curvature change are given by:
+ \begin{align*} 
+ \varepsilon_{\alpha \beta} &= \frac{1}{2} (a_{\alpha \beta} - \mathring{a}_{\alpha \beta}) \\
+  \kappa_{\alpha \beta} &= (\mathring{b}_{\alpha \beta} - b_{\alpha \beta})
+\end{align*}
+and the Green-Lagrange strain is given by
+ \begin{align*} 
+ E_{\alpha \beta} &=  \varepsilon_{\alpha \beta}  + \theta^3 \kappa_{\alpha \beta}
+\end{align*}
+where $\theta^3$ is the thickness coordinate ($-h/2 \le \theta^3 \le h/2 $). The governing equations are obtained by taking variations of the elastic strain energy density, $W(\bE)$.
+ }
+ 
+\frame{
+  \frametitle{Summary and look ahead}
+  \begin{itemize}
+  \setlength\itemsep{1em}
+  \item Developed a numerical framework for modeling accretive growth in seashells and similar exoskeleton structures.
+  \item Classified growth patterns into mantle-driven and periostracum-driven modes. 
+  \item Studied deformation modes as function of geometry (curvature) and growth/calcification rate.
+  \item Validating/proposing growth patterns which would yield complex shell structures (hierarchical shapes, folding back modes, bareling, etc.)  
+  \item Ongoing work on developing a shell on solid framework for modeling coupled mantle and periostracum driven modes.
+  \item Identifying common exoskeleton growth patterns across various species of phylum Mollusca.
+  \end{itemize}
+}
+
+\fi
+
+\frame{
+  \frametitle{Thank you!!!}
+}
+ 
+\end{document} 
