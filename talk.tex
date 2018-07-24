@@ -4,8 +4,15 @@
 %\hypersetup{pdfpagemode=FullScreen}
 \useoutertheme[subsection=false]{smoothbars}
  
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
 % include packages
-\usepackage{subfigure}
+%\usepackage{subfigure}
 \usepackage{multicol}
 \usepackage{amsmath}
 \usepackage{psfrag}
@@ -25,6 +32,8 @@
 \usepackage{rotating}
 \usepackage{textpos}
 \usepackage{captdef}
+\usepackage{caption}
+\usepackage{subcaption}
 %---------------------------------------------------------
 %               Bold Face Math Characters:
 %               All In Format: \B***** .
@@ -166,6 +175,147 @@ $^3$ Oakland University, Michigan
 \end{itemize}
 } 
 
+\frame{
+  \frametitle{Motivation: Embroyogenesis}
+  \begin{figure}[hbt]
+       \begin{center}
+       \includegraphics[width=0.8\textwidth]{figures2/embroyo2.png}{}
+       \end{center}
+       \caption*{ Early cleavages of C. subdepressus under light microscopy [Reference: B. C. Vellutini and A. E. Migotto, PLOS One, 2010]}
+   \end{figure}
+   \vspace{-0.15in}
+    \href{run:movies/ASeaBiscuitsLife.mp4}{\small Embroyogenesis in C. subdepressus}
+}
+
+\frame{
+  \frametitle{Motivation: Embroyogenesis}
+  \begin{figure}[hbt]
+       \begin{center}
+       \includegraphics[width=\textwidth]{figures2/journalpcbi1001128g001.png}{}
+       \end{center}
+       \caption*{Schematic view of morphological and lineage specification steps during the early mouse embryonic development [Reference: Krupinski P, Chickarmane V, Peterson C (2011),  PLoS Comput Biol 7(5): e1001128]}
+   \end{figure}
+}
+
+\frame{
+  \frametitle{Motivation: Tumor growth}
+  \begin{figure}[hbt]
+       \begin{center}
+       \includegraphics[width=0.8\textwidth]{figures2/tumorMicroEnvironment.png}{}
+       \end{center}
+       \caption*{Complexity of the tumor microenvironment [Reference: Bumsoo Han et al., Cancer Letters, Vol. 380: 1, 2016]}
+   \end{figure}
+   \vspace{-0.15in}
+    \href{run:movies/tumorGrowth.mp4}{\small Cell packing in growing tumors [Reference: Mills Lab, RPI]}
+}
+
+\frame{
+  \frametitle{Soft packing of cells in cellular aggregates}
+  \begin{figure}[hbt]
+       \begin{center}
+       \includegraphics[width=\textwidth]{figures2/packing.eps}{}
+       \end{center}
+   \end{figure}
+   \vspace{0.2in}
+\small{$^1$ https://commons.wikimedia.org/w/index.php?curid=29251495} \\
+\small{$^2$ Embryo of Echinaster brasiliensis (A. E Migotto, Universidade de Sao Paulo) https://www.cell.com/pictureshow/embryogenesis}
+}
+
+\frame{
+  \frametitle{Relevant numerical models: Cellular automata / High-Q Potts models}
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures2/ElementaryCARule030_700.png}
+        \caption*{Cellular automata rules$^1$}
+        %\label{fig:gull}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures2/CASimulation.png}
+        \caption*{Clustering dynamics using CA models$^2$} 
+      %\label{fig:tiger}
+    \end{subfigure}
+  % \caption{Pictures of animals}\label{fig:animals}
+\end{figure}
+\small{$^1$ http://mathworld.wolfram.com/CellularAutomaton.html} \\
+\small{$^2$ Y. Zhang et al., PLoS ONE 6(10): e24999. doi:10.1371/journal.pone.0024999, 2011}
+}
+
+\frame{
+  \frametitle{Relevant numerical models: }
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures2/ElementaryCARule030_700.png}
+        \caption*{Cellular automata rules$^1$}
+        %\label{fig:gull}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures2/CASimulation.png}
+        \caption*{Clustering dynamics using CA models$^2$} 
+      %\label{fig:tiger}
+    \end{subfigure}
+  % \caption{Pictures of animals}\label{fig:animals}
+\end{figure}
+\small{$^1$ http://mathworld.wolfram.com/CellularAutomaton.html} \\
+\small{$^2$ Y. Zhang et al., PLoS ONE 6(10): e24999. doi:10.1371/journal.pone.0024999, 2011}
+}
+
+\frame{
+  \frametitle{Soft packing: A phase field approach}
+}
+
+\frame{
+  \frametitle{Soft packing: A phase field approach}
+}
+
+\frame{
+  \frametitle{Soft packing: Results}
+}
+
+\frame{
+  \frametitle{Soft packing: Results}
+}
+
+\frame{
+  \frametitle{Soft packing: Role of mechanics}
+}
+
+\frame{
+  \frametitle{Soft packing: Shape model}
+}
+
+\frame{
+  \frametitle{Shape model: Results}
+}
+
+\frame{
+  \frametitle{Shape model: Results}
+}
+
+\frame{
+  \frametitle{Shape model: Extension to material models}
+}
+
+\frame{
+  \frametitle{Soft packing: Connection to embroyogenesis}
+}
+
+\frame{
+  \frametitle{Soft packing: Connection to tumor growth}
+}
+
+\frame{
+  \frametitle{Summary and ongoing work}
+}
+
+\frame{
+  \frametitle{Thanks!!!}
+}
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -332,8 +482,5 @@ where $\theta^3$ is the thickness coordinate ($-h/2 \le \theta^3 \le h/2 $). The
 
 \fi
 
-\frame{
-  \frametitle{Thank you!!!}
-}
  
 \end{document} 
