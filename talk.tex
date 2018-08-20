@@ -162,6 +162,19 @@ $^3$ Oakland University, Michigan
 
 \frame{\titlepage}
  
+ \frame{
+  \frametitle{Soft packing of cells in cellular aggregates}
+  \begin{figure}[hbt]
+       \begin{center}
+       \includegraphics[width=\textwidth]{figures2/packing.eps}{}
+       \end{center}
+   \end{figure}
+   \vspace{0.2in}
+\small{$^1$ https://commons.wikimedia.org/w/index.php?curid=29251495} \\
+\small{$^2$ Embryo of Echinaster brasiliensis (A. E Migotto, Universidade de Sao Paulo) https://www.cell.com/pictureshow/embryogenesis}
+}
+
+
  %Slide
 \frame{
 \frametitle{Soft packing problem: Overview}
@@ -171,13 +184,13 @@ $^3$ Oakland University, Michigan
 \item Embroyogenesis \vspace{0.05in}
 \item Tumor growth \vspace{0.025in}
 \end{itemize}  \vspace{0.025in}
-\item Previous models\vspace{0.025in}
+\item Relevant numerical models\vspace{0.025in}
 \begin{itemize}
-\item Vertex based, cell based, cellular automata. \vspace{0.025in}
+\item Lattice (Cellular automata) and Off-Lattice (Vertex and cell based) models. \vspace{0.025in}
 \end{itemize}  \vspace{0.025in}
 \item Phase field formulation of soft packing \vspace{0.05in}
 \item Mechanics of soft packing \vspace{0.05in}
-\item Material models \vspace{0.05in}
+\item Results \vspace{0.05in}
 \item Summary
 \end{itemize}
 } 
@@ -194,6 +207,7 @@ $^3$ Oakland University, Michigan
     \href{run:movies/ASeaBiscuitsLife.mp4}{\small Embroyogenesis in C. subdepressus}
 }
 
+
 \frame{
   \frametitle{Motivation: Embroyogenesis}
   \begin{figure}[hbt]
@@ -201,6 +215,18 @@ $^3$ Oakland University, Michigan
        \includegraphics[width=\textwidth]{figures2/journalpcbi1001128g001.png}{}
        \end{center}
        \caption*{Schematic view of morphological and lineage specification steps during the early mouse embryonic development [Reference: Krupinski P, Chickarmane V, Peterson C (2011),  PLoS Comput Biol 7(5): e1001128]}
+   \end{figure}
+}
+
+
+\frame{
+  \frametitle{Motivation: Embroyogenesis}
+  \begin{figure}[hbt]
+       \begin{center}
+       \includegraphics[width=\textwidth]{figures2/bmpExpression.png}{}
+       \end{center}
+       \captionsetup{justification=centering}
+       \caption*{Expression of various transcription factors under different BMP4 concentrations and domain geometries.   [Experiments by Tugba Topal, University of Michigan.]}
    \end{figure}
 }
 
@@ -213,19 +239,7 @@ $^3$ Oakland University, Michigan
        \caption*{Complexity of the tumor microenvironment [Reference: Bumsoo Han et al., Cancer Letters, Vol. 380: 1, 2016]}
    \end{figure}
    \vspace{-0.15in}
-    \href{run:movies/tumorGrowth.mp4}{\small Cell packing in growing tumors [Reference: Mills Lab, RPI]}
-}
-
-\frame{
-  \frametitle{Soft packing of cells in cellular aggregates}
-  \begin{figure}[hbt]
-       \begin{center}
-       \includegraphics[width=\textwidth]{figures2/packing.eps}{}
-       \end{center}
-   \end{figure}
-   \vspace{0.2in}
-\small{$^1$ https://commons.wikimedia.org/w/index.php?curid=29251495} \\
-\small{$^2$ Embryo of Echinaster brasiliensis (A. E Migotto, Universidade de Sao Paulo) https://www.cell.com/pictureshow/embryogenesis}
+    \href{run:movies/tumorGrowth.avi}{\small Cell packing in growing tumors [Reference: Kristen Mills Lab, RPI]}
 }
 
 \frame{
@@ -289,8 +303,18 @@ $^3$ Oakland University, Michigan
        \end{center}
    \end{figure}
    %\vspace{-0.15in}
-    \href{run:movies/phaseField12Cells.mp4}{\small Phase field simulation of soft packing}
+    \href{run:movies/phaseField12Cells.mp4}{\small Phase field simulation of soft packing}\\
+    https://arxiv.org/abs/1806.01410
 }
+
+\frame{
+  \frametitle{Phase field modeling}
+  \begin{figure} 
+  \begin{center} \includegraphics[width=0.95\textwidth]{figures2/diffusion.png} \end{center} 
+  \end{figure}
+  \href{run:movies/diffusion.mp4}{Comparison of Fickian diffusion and higher order diffusion} 
+}
+
 
 %Slide
 \frame{
@@ -340,15 +364,6 @@ Kinetics:
 \small{\textit{van der Waals, Verhandel. Konink. Akad. Westen. Amsterdam, 1893}}\\
 \small{\textit{Cahn ~\& Hilliard, J. Chem. Phys., 1958}}
 } 
-
-\frame{
-  \frametitle{Phase field modeling}
-  \begin{figure} 
-  \begin{center} \includegraphics[width=0.95\textwidth]{figures2/diffusion.png} \end{center} 
-  \end{figure}
-  \href{run:movies/diffusion.mp4}{Comparison of Fickian diffusion and higher order diffusion} 
-}
-
 
 \frame{
   \frametitle{Soft packing: A novel phase field approach}
@@ -413,25 +428,26 @@ Implemented in the \textit{deal.II} finite element framework.
 	\centering
 	\begin{subfigure}[h!]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{figures2/onecell_2}
-		\caption{Initial single circular cell}
+		\caption*{Initial single circular cell}
 		\label{fig:onecell}
 	\end{subfigure}
 	\begin{subfigure}[h!]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{figures2/fourcell_2}
-		\caption{Progression to four cells}
+		\caption*{Progression to four cells}
 		\label{fig:fourcell}
 	\end{subfigure}
 	\begin{subfigure}[h!]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{figures2/eightcell_2}
-		\caption{Progression to eight cells}
+		\caption*{Progression to eight cells}
 		\label{fig:eightcell}
 	\end{subfigure}
 	\begin{subfigure}[h!]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{figures2/twelvecell_2}
-		\caption{Progression to twelve cells.}
+		\caption*{Progression to twelve cells.}
 		\label{fig:twelvecell}
 	\end{subfigure}
 \end{figure}
+\href{run:movies/twoCellsDivision.mp4}{Second division of cells.} \\
 \href{run:movies/noMechanics12Cells.mp4}{Progression of cell division and packing with 12 cells.} 
 }
 
@@ -458,6 +474,8 @@ Implemented in the \textit{deal.II} finite element framework.
   \item Problem size scales with the number of cell considered. 
   \item Phase field related length and time scales limit space and time discretization. 
  \end{itemize}
+ \vspace{0.2in}
+  https://arxiv.org/abs/1806.01410
 }
 
 
@@ -515,12 +533,12 @@ Comparison of phase only model with the phase and shape model:
 	\centering
 	\begin{subfigure}[h!]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{figures/twelvecell_2}
-		\caption{Phase only model}
+		\caption*{Phase only model}
 		\label{fig:onecell}
 	\end{subfigure}
 	\begin{subfigure}[h!]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{figures/anisotropy_twelvecell_2}
-		\caption{Phase+Shape model}
+		\caption*{Phase+Shape model}
 		\label{fig:twelvecell}
 	\end{subfigure}
 \end{figure}
@@ -537,181 +555,30 @@ Comparison of phase only model with the phase and shape model:
 }
 
 \frame{
-  \frametitle{Soft packing: Connection to tumor growth}
-}
-
-\frame{
-  \frametitle{Summary and ongoing work}
-}
-
-\frame{
-  \frametitle{Thanks!!!}
-}
-
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iffalse
-
-\frame{
-  \frametitle{Growth driven by translating/revolving characteristic generating curves}
-  \begin{figure}[hbt]
-       \begin{center}
-       \includegraphics[width=\textwidth]{figures/baseGeometries.eps}{}
-       \end{center}
-   \end{figure}
-}
-
-
-\frame{
-  \frametitle{Structural foundations of shell surface: Mantle and Periostracum}
-  \begin{figure}[hbt]
-       \begin{center}
-          \includegraphics[width=\textwidth]{figures/MandPMacroScale.jpg}{}
-       \end{center}
-   \end{figure}
-}
-
-
-\frame{
-  \frametitle{Distinct growth modes driven by Mantle and Periostracum}
-  \begin{figure}[hbt]
-       \begin{center}
-          \includegraphics[width=0.8\textwidth]{figures/MandPClassification.eps}{}
-       \end{center}
-   \end{figure}
-}
-
-
-\frame{
-  \frametitle{Modeling evolving fronts by accretive growth}
-  \centering $\bF=\bF^{e} \bF^{g}$
-  \vspace{0.1in}
-    \begin{figure}[hbt]
-       \begin{center}
-          \includegraphics[width=0.4\textwidth]{figures/fronts2.eps}{}
-       \end{center}
-   \end{figure}
-    \href{run:movies/accretiveGrowth.mp4}{\small Accretive growth}
-}
-
-
-\frame{
-  \frametitle{Mantle driven growth: Effect of base geometry - Flat plate}
-.\\[-7mm]
-\begin{tabular}{c@{}c@{}c}
- \includegraphics[width=0.35\textwidth]{figures/simulations/flatPlateZ0p65}
-&\includegraphics[width=0.35\textwidth]{figures/simulations/flatPlateZ0}
-& \includegraphics[width=0.25\textwidth]{figures/frontFlat.eps} \\[-5mm]
-  \href{run:movies/flatPlateZ0p65.mp4}{\textit{0.5t}} &  \href{run:movies/flatPlateZ0.mp4}{\textit{t}} &\\
- \includegraphics[width=0.35\textwidth]{figures/simulations/flatPlateZ2}
-&\includegraphics[width=0.35\textwidth]{figures/simulations/flatPlateZ4} &\\[-5mm]
-\href{run:movies/flatPlateZ2.mp4}{\textit{2t}}  & \href{run:movies/flatPlateZ4.mp4}{\textit{4t}} &
-\end{tabular}
-}
-
-\frame{
-  \frametitle{Mantle driven growth: Effect of base geometry - Arc}
-.\\[-7mm]
-\begin{tabular}{c@{}c@{}c}
- \includegraphics[width=0.35\textwidth]{figures/simulations/arcZ0p5}
-&\includegraphics[width=0.35\textwidth]{figures/simulations/arcZ0}
-& \includegraphics[width=0.15\textwidth]{figures/arcModels.eps} \\[-2mm]
-  {0.5t} &  {t} &  \href{run:movies/arc.mp4}{\tiny [\textit{Arc front growth}]}  \\
- \includegraphics[width=0.35\textwidth]{figures/simulations/arcZ2}
-&\includegraphics[width=0.35\textwidth]{figures/simulations/arcZ4} &\\[-5mm]
-{2t}  & {4t} &
-\end{tabular}
-}
-
-\frame{
-  \frametitle{Mantle driven growth: Effect of base geometry - Spline}
-.\\[-7mm]
-\centering
-\begin{tabular}{c@{}c@{}c}
- \includegraphics[height=0.4\textheight]{figures/simulations/splineZ0p5}
-&\includegraphics[height=0.4\textheight]{figures/simulations/splineZ0p9}
-& \includegraphics[width=0.25\textwidth]{figures/splineModels.eps} \\[-2mm]
- \href{run:movies/splineZ0p5.mp4}{\textit{0.5t}} &  \href{run:movies/splineZ0p9.mp4}{\textit{t}} &\\
- \includegraphics[height=0.4\textheight]{figures/simulations/splineZ2}
-&\includegraphics[height=0.4\textheight]{figures/simulations/splineZ4} &\\[-5mm]
-\href{run:movies/splineZ2.mp4}{\textit{2t}}  & \href{run:movies/splineZ4.mp4}{\textit{4t}} &
-\end{tabular}
-}
-
-
-\frame{
-  \frametitle{Hierarchical buckling}
-  \begin{figure}[hbt]
-       \begin{center}
-          \includegraphics[width=0.95\textwidth]{figures/simulations/hierarchical.eps}{}
-       \end{center}
-   \end{figure}
-}
-
-\frame{
-  \frametitle{Folding back}
-  \begin{figure}[hbt]
-       \begin{center} 
-          \includegraphics[width=0.9\textwidth]{figures/simulations/foldingBack.eps}{}
-       \end{center}
-   \end{figure}
-  \hspace{1.5cm}  \href{run:movies/foldback2.mp4}{\small \textit{Distributed growth}} \hspace{1.6cm}  \href{run:movies/foldback1.mp4}{\small \textit{Localized growth}} 
-   }
-
-\frame{
-  \frametitle{Periostracum driven growth}
-\begin{tabular}{c@{}c@{}c}
- \includegraphics[width=0.3\textwidth]{figures/simulations/barrel1}
-&\includegraphics[width=0.3\textwidth]{figures/simulations/barrel2}
-& \includegraphics[width=0.3\textwidth]{figures/simulations/barrel.eps} \\[-2mm]
- \href{run:movies/barrel1.mp4}{\textit{t}} &  \href{run:movies/barrel2.mp4}{\textit{2t}} &
-\end{tabular}
-\vspace{0.25in}\\
- \href{run:movies/eigenBarrelNoMesh.mp4}{\small \textit{[Eigen modes]}} 
-}
-
-\frame{
-  \frametitle{Modeling coupled Mantle and Periostracum modes (ongoing)}
-  \begin{figure}[hbt]
-       \begin{center}
-          \includegraphics[width=0.55\textwidth]{figures/shellOnSolid.eps}{}
-       \end{center}
-   \end{figure}
-}
-
-\frame{
-  \frametitle{Modeling coupled Mantle and Periostracum modes (ongoing)}
-  Shell kinematics (Kirchhoff-Love): Given a point $\br$ on the mid-surface and tangent base vectors $\ba_{\alpha}$(=$\br_{,\alpha}$), we have\\
- \begin{align*} 
- a_{\alpha \beta} &= \ba_{\alpha} \cdot \ba_{\beta} \qquad \qquad (\text{first fundamental form})\\
- b_{\alpha \beta} &= {\ba_{\alpha,\beta}} \cdot \ba_{3}  \qquad \qquad (\text{second fundamental form})
-\end{align*}
-Now the membrane strain and curvature change are given by:
- \begin{align*} 
- \varepsilon_{\alpha \beta} &= \frac{1}{2} (a_{\alpha \beta} - \mathring{a}_{\alpha \beta}) \\
-  \kappa_{\alpha \beta} &= (\mathring{b}_{\alpha \beta} - b_{\alpha \beta})
-\end{align*}
-and the Green-Lagrange strain is given by
- \begin{align*} 
- E_{\alpha \beta} &=  \varepsilon_{\alpha \beta}  + \theta^3 \kappa_{\alpha \beta}
-\end{align*}
-where $\theta^3$ is the thickness coordinate ($-h/2 \le \theta^3 \le h/2 $). The governing equations are obtained by taking variations of the elastic strain energy density, $W(\bE)$.
- }
- 
-\frame{
   \frametitle{Summary and look ahead}
   \begin{itemize}
   \setlength\itemsep{1em}
-  \item Developed a numerical framework for modeling accretive growth in seashells and similar exoskeleton structures.
-  \item Classified growth patterns into mantle-driven and periostracum-driven modes. 
-  \item Studied deformation modes as function of geometry (curvature) and growth/calcification rate.
-  \item Validating/proposing growth patterns which would yield complex shell structures (hierarchical shapes, folding back modes, bareling, etc.)  
-  \item Ongoing work on developing a shell on solid framework for modeling coupled mantle and periostracum driven modes.
-  \item Identifying common exoskeleton growth patterns across various species of phylum Mollusca.
+   \item Developed a diffused interface based numerical framework for modeling growth and packing of cell aggregates. Salient features: \vspace{0.05in}
+  \begin{itemize}
+  \setlength\itemsep{1em}
+  \item No discreet interface evolving mechanisms like those employed in lattice, cell-centric and vertex dynamics models needed.
+  \item Time evolution occurs at realistic time scales controlled by the growth rate, or doubling time of the cells, and does not need equilibrations needed by other discrete models.
+  \item Any arbitrary cell shape can be represented without being limited to polygonal shapes or a jagged representation of the cell boundary.
+  \item Basic model for incorporating mechanics and material models of the underlying cytoskeletal network. 
+  \end{itemize}
+  \item Ongoing numerical work on incorporating (1) A material model in place of the shape model, (2) Active parameter tracking to allow for scaling independent of the number of cells.
+  \item Key applications: (1) Soft packing in cells, (2) Patterning in embryogenesis, (3) Other problems involving cell aggregates like collective cell motion. 
   \end{itemize}
 }
 
-\fi
+\frame[c]{
+  \frametitle{Thanks!!!}
+\begin{center}
+\Huge Questions~?
+\end{center}	
+}
 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 \end{document} 
