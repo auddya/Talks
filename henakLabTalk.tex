@@ -1,0 +1,348 @@
+\documentclass[compress,red, 9pt, t]{beamer}
+\mode<presentation>
+%\usetheme{Singapore}
+%\hypersetup{pdfpagemode=FullScreen}
+\useoutertheme[subsection=false]{smoothbars}
+
+\addtobeamertemplate{navigation symbols}{}{%
+	\usebeamerfont{footline}%
+	\usebeamercolor[fg]{footline}%
+	\hspace{1em}%
+	\insertframenumber/\inserttotalframenumber
+}
+
+% include packages
+%\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{psfrag}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[all,knot]{xy}
+\xyoption{arc}
+\usepackage{url}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{setspace}
+\setbeamersize{text margin left=4mm, text margin right=3mm}
+%My Packages
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+%\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{rotating}
+\usepackage{textpos}
+\usepackage{captdef}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{rotating}
+\newcommand{\sun}{\ensuremath{\odot}} % sun symbol is \sun
+\let\vaccent=\v % rename builtin command \v{} to \vaccent{}
+\renewcommand{\v}[1]{\ensuremath{\mathbf{#1}}} % for vectors
+\newcommand{\gv}[1]{\ensuremath{\mbox{\boldmath$ #1 $}}} 
+\newcommand{\grad}[1]{\gv{\nabla} #1}
+%---------------------------------------------------------
+%               Bold Face Math Characters:
+%               All In Format: \B***** .
+%---------------------------------------------------------
+\def\BGamma{\mbox{\boldmath$\partial\Omega$}}
+\def\BDelta{\mbox{\boldmath$\Delta$}}
+\def\BTheta{\mbox{\boldmath$\Theta$}}
+\def\BLambda{\mbox{\boldmath$\Lambda$}}
+\def\BXi{\mbox{\boldmath$\Xi$}}
+\def\BPi{\mbox{\boldmath$\Pi$}}
+\def\BSigma{\mbox{\boldmath$\Sigma$}}
+\def\BUpsilon{\mbox{\boldmath$\Upsilon$}}
+\def\BPhi{\mbox{\boldmath$\Phi$}}
+\def\BPsi{\mbox{\boldmath$\Psi$}}
+\def\BOmega{\mbox{\boldmath$\Omega$}}
+\def\Balpha{\mbox{\boldmath$\alpha$}}
+\def\Bbeta{\mbox{\boldmath$\beta$}}
+\def\Bgamma{\mbox{\boldmath$\gamma$}}
+\def\Bdelta{\mbox{\boldmath$\delta$}}
+\def\Bepsilon{\mbox{\boldmath$\epsilon$}}
+\def\Bzeta{\mbox{\boldmath$\zeta$}}
+\def\Beta{\mbox{\boldmath$\eta$}}
+\def\Btheta{\mbox{\boldmath$\theta$}}
+\def\Biota{\mbox{\boldmath$\iota$}}
+\def\Bkappa{\mbox{\boldmath$\kappa$}}
+\def\Blambda{\mbox{\boldmath$\lambda$}}
+\def\Bmu{\mbox{\boldmath$\mu$}}
+\def\Bnu{\mbox{\boldmath$\nu$}}
+\def\Bxi{\mbox{\boldmath$\xi$}}
+\def\Bpi{\mbox{\boldmath$\pi$}}
+\def\Brho{\mbox{\boldmath$\rho$}}
+\def\Bsigma{\mbox{\boldmath$\sigma$}}
+\def\Btau{\mbox{\boldmath$\tau$}}
+\def\Bupsilon{\mbox{\boldmath$\upsilon$}}
+\def\Bphi{\mbox{\boldmath$\phi$}}
+\def\Bchi{\mbox{\boldmath$\chi$}}
+\def\Bpsi{\mbox{\boldmath$\psi$}}
+\def\Bomega{\mbox{\boldmath$\omega$}}
+\def\Bvarepsilon{\mbox{\boldmath$\varepsilon$}}
+\def\Bvartheta{\mbox{\boldmath$\vartheta$}}
+\def\Bvarpi{\mbox{\boldmath$\varpi$}}
+\def\Bvarrho{\mbox{\boldmath$\varrho$}}
+\def\Bvarsigma{\mbox{\boldmath$\varsigma$}}
+\def\Bvarphi{\mbox{\boldmath$\varphi$}}
+\def\bone{\mbox{\boldmath$1$}}
+\def\bzero{\mbox{\boldmath$0$}}
+%---------------------------------------------------------
+%               Bold Face Math Italic:
+%               All In Format: \b* .
+%---------------------------------------------------------
+\def\bA{\mbox{\boldmath$ A$}}
+\def\bB{\mbox{\boldmath$ B$}}
+\def\bC{\mbox{\boldmath$ C$}}
+\def\bD{\mbox{\boldmath$ D$}}
+\def\bE{\mbox{\boldmath$ E$}}
+\def\bF{\mbox{\boldmath$ F$}}
+\def\bG{\mbox{\boldmath$ G$}}
+\def\bH{\mbox{\boldmath$ H$}}
+\def\bI{\mbox{\boldmath$ I$}}
+\def\bJ{\mbox{\boldmath$ J$}}
+\def\bK{\mbox{\boldmath$ K$}}
+\def\bL{\mbox{\boldmath$ L$}}
+\def\bM{\mbox{\boldmath$ M$}}
+\def\bN{\mbox{\boldmath$ N$}}
+\def\bO{\mbox{\boldmath$ O$}}
+\def\bP{\mbox{\boldmath$ P$}}
+\def\bQ{\mbox{\boldmath$ Q$}}
+\def\bR{\mbox{\boldmath$ R$}}
+\def\bS{\mbox{\boldmath$ S$}}
+\def\bT{\mbox{\boldmath$ T$}}
+\def\bU{\mbox{\boldmath$ U$}}
+\def\bV{\mbox{\boldmath$ V$}}
+\def\bW{\mbox{\boldmath$ W$}}
+\def\bX{\mbox{\boldmath$ X$}}
+\def\bY{\mbox{\boldmath$ Y$}}
+\def\bZ{\mbox{\boldmath$ Z$}}
+\def\ba{\mbox{\boldmath$ a$}}
+\def\bb{\mbox{\boldmath$ b$}}
+\def\bc{\mbox{\boldmath$ c$}}
+\def\bd{\mbox{\boldmath$ d$}}
+\def\be{\mbox{\boldmath$ e$}}
+\def\bff{\mbox{\boldmath$ f$}}
+\def\bg{\mbox{\boldmath$ g$}}
+\def\bh{\mbox{\boldmath$ h$}}
+\def\bi{\mbox{\boldmath$ i$}}
+\def\bj{\mbox{\boldmath$ j$}}
+\def\bk{\mbox{\boldmath$ k$}}
+\def\bl{\mbox{\boldmath$ l$}}
+\def\bm{\mbox{\boldmath$ m$}}
+\def\bn{\mbox{\boldmath$ n$}}
+\def\bo{\mbox{\boldmath$ o$}}
+\def\bp{\mbox{\boldmath$ p$}}
+\def\bq{\mbox{\boldmath$ q$}}
+\def\br{\mbox{\boldmath$ r$}}
+\def\bs{\mbox{\boldmath$ s$}}
+\def\bt{\mbox{\boldmath$ t$}}
+\def\bu{\mbox{\boldmath$ u$}}
+\def\bv{\mbox{\boldmath$ v$}}
+\def\bw{\mbox{\boldmath$ w$}}
+\def\bx{\mbox{\boldmath$ x$}}
+\def\by{\mbox{\boldmath$ y$}}
+\def\bz{\mbox{\boldmath$ z$}}
+%----------------------------------------
+\title{\LARGE A Diffuse Interface Framework for Modeling the Evolution of Multi-cell Aggregates as a Soft Packing Problem}
+\subtitle{}
+
+\author{D.  Auddya$^1$, S. Rudraraju$^1$
+	\\ \vspace{0.2in}
+	$^1$ University of Wisconsin - Madison\\ \vspace{0.1in}
+	%%%$^2$ University of Michigan Ann Arbor\\ \vspace{0.1in}
+	%$^3$ Oakland University, Michigan%%%
+	%\includegraphics[height=0.35\textheight]{figures/simulations/reflectedShellZoom2.png}
+}
+\date{Computational Mechanics and Multi-Physics Group\\ \vspace{.10cm} August 24, 2018}
+%\author[The author]{\includegraphics[height=1cm,width=2cm]{figures/reflectedShellZoom.png}\\The Author}
+
+%start the show
+\begin{document}
+\frame{\titlepage}
+%%%Slide 1%%%
+\frame{
+	\frametitle{Motivation: Embroyogenesis}
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[width=0.8\textwidth]{figures2/embroyo2.png}{}
+		\end{center}
+		\caption*{ Early cleavages of C. subdepressus under light microscopy [Reference: B. C. Vellutini and A. E. Migotto, PLOS One, 2010]}
+	\end{figure}
+	\vspace{-0.15in}
+	\href{run:movies/ASeaBiscuitsLife.mp4}{\small Embroyogenesis in C. subdepressus}
+}
+%%%Slide 2%%%%
+\frame{
+\frametitle{Phase field modeling}
+\begin{columns}[T] % align columns
+\begin{column}{.47\textwidth}
+Cahn-Hilliard dynamics
+ \begin{equation*}
+\Pi(c, \grad  c) = \int_{\Omega}  \left[  f( c ) + \grad  c  \cdot \kappa(\grad c) \grad  c  \right]  dV 
+\end{equation*}
+Chemical potential:
+\begin{align*}
+	   \v{\mu} = \delta_{c}\Pi( c , \grad  c)  
+\end{align*}   
+Kinetics:
+\begin{align*}
+   \frac{\partial c }{\partial t} = \grad \cdot (-\bL (\grad c) \grad \v{\mu}) 
+\end{align*}  
+\begin{itemize}
+\item Models evolution of conserved fields like composition.
+\item Fourth order PDE with complex anisotropic dependencies.
+\end{itemize} 
+%
+\end{column}%
+\hfill%
+\begin{column}{.47\textwidth}
+Allen-Cahn dynamics
+\begin{equation*}
+\Pi(\eta_i, \grad  \eta_i) = \int_{\Omega}  \left[  f( \eta_i ) +  \grad  \eta_i  \cdot \kappa (\grad  \eta_i) \grad  \eta_i  \right]  dV 
+\end{equation*}
+Chemical potential:
+\begin{align*}
+	   \v{\mu} = \delta_{\eta_i}\Pi( \eta_i, \grad  \eta_i)  
+\end{align*} 
+Kinetics:
+\begin{align*}
+   \frac{\partial \eta_i }{\partial t} = - (\bL (\grad \eta_i) ~ \v{\mu}    ) 
+\end{align*}  
+\begin{itemize}
+\item Models evolution of non-conserved fields like structural order parameters. 
+\item System of highly coupled second order PDE's.
+\end{itemize} 
+%
+\end{column}%
+\end{columns}
+\vfill
+\small{\textit{van der Waals, Verhandel. Konink. Akad. Westen. Amsterdam, 1893}}\\
+\small{\textit{Cahn ~\& Hilliard, J. Chem. Phys., 1958}}
+} 
+
+%%%Slide 3%%%
+
+\frame{
+	\frametitle{Variational formulation}
+	Taking the variational derivative with respect to $c_k$ yields
+	\begin{align*}
+	\delta \Pi_k[\bc;w] =  & \left.\frac{\text{d}}{\text{d}\epsilon} \int\limits_{\Omega} \sum_{k=1}^{N} \left(f(c_k+\epsilon w) + \frac{\kappa}{2}\vert\grad (c_k+\epsilon w)\vert^2+ \sum_{l\ne k}\lambda (c_k+\epsilon w)^2 c_l^2\right)  ~\text{d}V \right|_{\epsilon=0} \nonumber\\
+	=&\int\limits_{\Omega} w \left( f^\prime(c_k) -  \kappa \Delta  c_k  + \sum_{l\ne k}2\lambda  c_k c_l^2 \right) ~dV + \int\limits_{\partial \Omega}   w \kappa \grad c_k \cdot \bn   ~dS
+	\end{align*} \\
+	\vspace{0.1in}
+	The chemical potential of the $k^\text{th}$ cell is identified as,
+	\begin{equation*}
+	\mu_k  = f^\prime(c_k) -  \kappa \Delta c_k + \sum_{l\ne k}2\lambda  c_k c_l^2
+	\label{equ:chemo_potential}
+	\end{equation*}\\
+	\vspace{0.1in}
+	Resulting kinetics:
+	\begin{equation*}
+	\frac{\partial c_k}{\partial t} = -~\grad \cdot (-M\grad \mu_k) + s_k
+	\label{equ:dynamic}
+	\end{equation*}
+}
+
+%%%Slide 4%%%
+
+
+\frame{
+	\frametitle{Variational formulation}
+	Time discretization:
+	\begin{align*}
+	c^{n+1}_{k} &= c^{n}_{k} + \Delta t (M~\grad \cdot (\grad \mu^{n+1}_{k})+s_{k})\nonumber\\
+	\text{where}\quad\mu^{n+1}_{k} &= {f^\prime}^ {n+1}(c_k) -  \kappa \Delta c^{n+1}_{k} + \sum_{l\ne k}2\lambda  c_k^{n+1} {c_l^{n+1}}^2
+	\end{align*}\\
+	\vspace{0.1in}
+	Weak formulation:
+	\begin{align*}
+	\int\limits_{\Omega}   w c_k^{n+1} ~\text{d}V
+	&= \int\limits_{\Omega}   (w  c_k^{n} - \grad w \cdot \Delta t M \grad \mu_k^{n+1} + w\Delta t s_k) ~\text{d}V\nonumber\\
+	\int\limits_{\Omega}   w  \mu_{k}^{n+1}  ~\text{d}V 
+	&=\int\limits_{\Omega}  (w  {f^\prime}^{n+1}(c_k) + \grad w \cdot \kappa \grad c_k^{n+1} ~dV + \int\limits_\Omega w \sum_{l\ne k}2\lambda  c_k^{n+1} {c_l^{n+1}}^2)  ~\text{d}V
+	\end{align*}\\
+	\vspace{0.2in}
+	Implemented in the \textit{deal.II} finite element framework.
+}
+
+%%%Slide 5%%%
+
+\frame{
+	\frametitle{Results: Cell divisions and soft packing}
+	\begin{figure}[h!]
+		\centering
+		\begin{subfigure}[h!]{0.4\textwidth}
+			\includegraphics[width=\textwidth]{figures2/onecell_2}
+			\caption*{Initial single circular cell}
+			\label{fig:onecell}
+		\end{subfigure}
+		\begin{subfigure}[h!]{0.4\textwidth}
+			\includegraphics[width=\textwidth]{figures2/fourcell_2}
+			\caption*{Progression to four cells}
+			\label{fig:fourcell}
+		\end{subfigure}
+		\begin{subfigure}[h!]{0.4\textwidth}
+			\includegraphics[width=\textwidth]{figures2/eightcell_2}
+			\caption*{Progression to eight cells}
+			\label{fig:eightcell}
+		\end{subfigure}
+		\begin{subfigure}[h!]{0.4\textwidth}
+			\includegraphics[width=\textwidth]{figures2/twelvecell_2}
+			\caption*{Progression to twelve cells.}
+			\label{fig:twelvecell}
+		\end{subfigure}
+	\end{figure}
+	\href{run:movies/twoCellsDivision.mp4}{Second division of cells.} \\
+	\href{run:movies/noMechanics12Cells.mp4}{Progression of cell division and packing with 12 cells.} 
+}
+
+
+%%%Slide 6%%%
+
+\frame{
+	\frametitle{Results: Cell divisions and soft packing}
+	Evolution of the phase field energy due to the division and packing processes. 
+	\begin{figure} 
+		\begin{center} \includegraphics[width=0.75\textwidth]{figures2/energyNoMechanics.png} \end{center} 
+	\end{figure}
+}
+
+%%%Slide 7%%%
+
+\frame{
+	\frametitle{Scutoids as a possible geometric solution to three dimensional epithelial cell packing}
+	\begin{itemize}
+		\item Scutoids develop because the apical and basal surface have different neighbours.Changes in cellular aspect ratio promote cellular rearrangements, and coupling between geometrical changes due to bending and line tension energy drives scutoid formation
+		\item Appearance of scutoids is a general feature of the epithelial architecture and is directly affected by surface ratio anisotropy. 
+		\item It is significant in its study as experiments reveal a considerable minimization in tissue energy and stabilize soft tissue packing.
+		\item Mathematical modeling and analysis of these complex geometrical shapes is executed using the Voronoi diagram on the plane of the epithelium.
+		\item It is often assumed that this cellular architecture is driven by the cell organization in apical cells.  
+	\end{itemize}
+	\vspace{0.2in}
+}
+
+%%%Slide 8%%%
+
+\frame{
+	\frametitle{Summary and look ahead}
+	\begin{itemize}
+		\setlength\itemsep{1em}
+		\item Developed a diffused interface based numerical framework for modeling growth and packing of cell aggregates. Salient features: \vspace{0.05in}
+		\begin{itemize}
+			\setlength\itemsep{1em}
+			\item No discreet interface evolving mechanisms like those employed in lattice, cell-centric and vertex dynamics models needed.
+			\item Time evolution occurs at realistic time scales controlled by the growth rate, or doubling time of the cells, and does not need equilibrations needed by other discrete models.
+			\item Any arbitrary cell shape can be represented without being limited to polygonal shapes or a jagged representation of the cell boundary.
+			\item Basic model for incorporating mechanics and material models of the underlying cytoskeletal network. 
+		\end{itemize}
+		\item Ongoing numerical work on incorporating (1) A material model in place of the shape model, (2) Active parameter tracking to allow for scaling independent of the number of cells.
+		\item Key applications: (1) Soft packing in cells, (2) Patterning in embryogenesis, (3) Other problems involving cell aggregates like collective cell motion. 
+	\end{itemize}
+}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document} 
+
