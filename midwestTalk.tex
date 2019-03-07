@@ -275,11 +275,15 @@
 %%%Slide 2%%%%
 
 \frame{
-	\frametitle{Phase field modeling}
-	\begin{figure} 
-		\begin{center} \includegraphics[width=0.95\textwidth]{figures2/diffusion.png} \end{center} 
+	\frametitle{Soft packing: A novel phase field approach}
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[width=\textwidth]{figures2/phaseField12Cells.png}{}
+		\end{center}
 	\end{figure}
-	\href{run:movies/diffusion.mp4}{Comparison of Fickian diffusion and higher order diffusion} 
+	%\vspace{-0.15in}
+	\href{run:movies/phaseField12Cells.mp4}{\small Phase field simulation of soft packing}\\
+	https://arxiv.org/abs/1806.01410
 }
 
 \frame{
@@ -332,6 +336,22 @@ Kinetics:
 
 %%%Slide 3%%%
 
+\frame{
+	\frametitle{Soft packing: A novel phase field approach}
+	Let $\Omega\in \mathbb{R}^2$ with a smooth boundary $\partial \Omega$. Scalar fields $c_k, \;k = 1,\dots,N$ with $c_k \in [0,1]$ serve to delineate the interior and exterior of the cell numbered $k$. Here, the interior of cell $k$ is $\omega_k \subset \Omega$, where $\omega_k = \{ \bX \in \Omega\vert c_k(\bX) =1\}$. The exterior is $\Omega\backslash\omega_k$. The free energy density function is built up beginning with the following form: 
+	\vspace{0.1in}
+	\begin{equation*}
+	\psi_1(c_k) = \alpha c_k^2(c_k-1)^2 + \frac{\kappa}{2}\vert\grad c_k\vert^2
+	\label{equ:psi1}
+	\end{equation*}\\
+	\vspace{0.2in}
+	The total free energy of the multi-cell aggregate is a functional $\Pi[\bc]$, defined as
+	\begin{align*}
+	\Pi[\bc] &:= \int\limits_\Omega \psi(\bc,\nabla c) ~\text{d}V\nonumber\\
+	&=\int\limits_\Omega \left(\sum_{k=1}^{N} f(c_k) + \sum_{k=1}^{N} \frac{\kappa}{2}\vert\grad c_k\vert^2 + \sum_{l\ne k}\sum_{k=1}^{N}\lambda c_k^2 c_l^2 \right) ~\text{d}V.
+	\label{equ:energy}
+	\end{align*}
+}
 \frame{
 	\frametitle{Variational formulation}
 	Taking the variational derivative with respect to $c_k$ yields
