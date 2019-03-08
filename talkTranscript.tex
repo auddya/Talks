@@ -1,0 +1,93 @@
+\documentclass[a4paper,oneside,11pt]{report}
+\usepackage{amsmath}
+\begin{document}
+	Slide 1
+	\begin{itemize}
+		\item Model for cell growth, cell division and packing 
+		\item Under soft constraints
+		\item Phase field modeling (Diffuse inteface methods)
+		\item Using one of many computational methods: Finite element framework
+		\item Membrane: Zero level set
+	\end{itemize}
+   Slide 2
+   \begin{itemize}
+   	\item Mathematical problem, packing of spheres
+   	\item Fixed volume. Optimal arrangement
+   	\item Inaccurate representation with right
+   	\item Shows embryo of starfish and cell evolution in a fixed volume.
+   	\item Challenge is to develop numerical methods to model alongside, incorporate the physics with it.
+   \end{itemize}
+   Slide 3
+   \begin{itemize}
+   	\item Peruse though the motivation slide 
+   	\item Previous literature studies based on it, Our numerical framework and
+   	\item Demonstrate certain examples
+   \end{itemize}
+   Slide 4
+   \begin{itemize}
+   	\item Figure shows light microscopy embryonic diagram of a sea urchin
+   	\item Nucleus divides, as indicated by arrows.
+   	\item Division proceeds evenly and then due to the fixed volume confinement it starts packing
+   	\item it forms a morula after multiple anisotropic cell divisions. Motivation
+   \end{itemize}
+   Slide 5
+   \begin{itemize}
+   	\item Another problem which serves as our motivation is tumor growth
+   	\item Dense stromal tissue prevents drug transport
+   	\item Interactions between fibronectins, calcinogens, cancerous fibrogens cause this. Investigate
+   \end{itemize}
+   Slide 6
+   \begin{itemize} 
+    \item Previous literature analysed these issues (on lattice and off latice)and came up with cellular automata
+    \item Collection of colored sets on structured grids which depend on rules set by neighbouring sets/cells
+    \item Jagged boundaries, crude model
+    \item Cannot capture cell interaction, cell division etc
+    \end{itemize}
+   Slide 7
+   \begin{itemize}
+   	\item Off latice addressed this problem of jagged boundaries and came up with vertex models
+   	\item Though it represents collection of cells broadly
+   	\item Cell shapes are primitive, minimally represents the original smooth shapes
+   \end{itemize}
+   Slide 8
+   \begin{itemize}
+   	\item Now we demonstrate our numerical framework to model these system
+   	\item illustrates cell division progressively.
+   	\item The cells are non overlapping and have anisotropy and smoothness
+   	\item The ellipse is an user defined boundary. Blue indicates cell exterior.
+   	\item Red indicates cell cytoplasm and the intermediate rainbow like transition from red to blue indicates cell membrane
+   	\item our frame work is based on volume compaction
+   \end{itemize}
+   Slide 9
+   \begin{itemize}
+   	\item Two categories of equations
+   	\item Solves 2nd order and 4th order pdes
+   	\item Can model both conserved and non conserve fields
+   \end{itemize}
+   Slide 10
+   \begin{itemize}
+   	\item free energy density function which depends on order parameter and its spatial derivative
+   	\item Scalar fields are considered as individual cells
+   	\item Bulk energy term, diffuse interface membrane, $\kappa$ control thickness
+   	\item Penalty term enforces cellular repulsion or non overlapping of scalar fields
+   \end{itemize}
+   Slide 11
+   \begin{itemize}
+   	\item we take a standard variation formulation
+   	\item Resulting chemical concentration is what we are interested in (scalar field, order parameter)
+   	\item Home grown code
+   \end{itemize}
+   Slide 12
+   \begin{itemize}
+   	\item Show video. Explain division from 2 to 4
+   	\item Time scales are similar
+   	\item Anisotropic growth, reiterate the color legend
+   	\item Packing of soft deformable structures illustrated
+   \end{itemize}
+   Slide 13
+   \begin{itemize}
+   	\item Refresh what we said so far
+   	\item Unlike other methods we do not have interface evolving mechanics
+   \end{itemize}
+    
+\end{document}
