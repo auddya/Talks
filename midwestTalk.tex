@@ -168,11 +168,11 @@
 		\end{center}
 	\end{figure}
 	\vspace{-0.001in}
-	\begin{itemize}
-		\item Mathematical representation of hard sphere packing, fixed volume
-		\item Insufficient to capture realistic shapes 
-		\item Challenge: Model soft packing 
-	\end{itemize}
+%	\begin{itemize}
+%		\item Mathematical representation of hard sphere packing, fixed volume
+%		\item Insufficient to capture realistic shapes 
+%		\item Challenge: Model soft packing 
+%	\end{itemize}
 	\tiny{$^1$ https://commons.wikimedia.org/w/index.php?curid=29251495} \\
 	\tiny{$^2$ Embryo of Echinaster brasiliensis (starfish) (A. E Migotto, Universidade de Sao Paulo) https://www.cell.com/pictureshow/embryogenesis}
 }
@@ -191,7 +191,7 @@
 			\item Lattice (Cellular automata) and Off-Lattice (Vertex and cell based) models. \vspace{0.025in}
 		\end{itemize}  \vspace{0.025in}
 		\item Phase field formulation of soft packing \vspace{0.05in}
-		\item Mechanics of soft packing \vspace{0.05in}
+		%\item Mechanics of soft packing \vspace{0.05in}
 		\item Results \vspace{0.05in}
 		%\item Highlight: Scutoids \vspace{0.05in}
 		\item Summary and Look Ahead
@@ -208,11 +208,11 @@
 		\caption*{ \tiny Early cleavages of C. subdepressus under light microscopy [Reference: B. C. Vellutini and A. E. Migotto, PLOS One, 2010]}
 	\end{figure}
 	\vspace{-0.15in}
-	\begin{itemize}
-		\item Division of nuclei to form daughter cells
-		\item Grows inside a fixed volume
-		\item Cell interaction, cell aggregation, non overlapping
-	\end{itemize}
+%	\begin{itemize}
+%		\item Division of nuclei to form daughter cells
+%		\item Grows inside a fixed volume
+%		\item Cell interaction, cell aggregation, non overlapping
+%	\end{itemize}
 	\href{run:movies/ASeaBiscuitsLife.mp4}{\tiny Embroyogenesis in C. subdepressus (sea urchin)}
 }
 
@@ -226,11 +226,11 @@
 		\caption*{\tiny Complexity of the tumor microenvironment [Reference: Bumsoo Han et al., Cancer Letters, Vol. 380: 1, 2016]}
 	\end{figure}
 	\vspace{-0.15in}
-	\begin{itemize}
-		\item Dense stromal tissue. 
-		\item Impaired drug transport
-		\item Aberrant interactions between stromal tissue constituents.
-	\end{itemize}
+%	\begin{itemize}
+%		\item Dense stromal tissue. 
+%		\item Impaired drug transport
+%		\item Aberrant interactions between stromal tissue constituents.
+%	\end{itemize}
 	\href{run:movies/tumorGrowth.avi}{\tiny Cell packing in growing tumors [Reference: Kristen Mills Lab, RPI]}
 } 
 
@@ -252,11 +252,11 @@
 		\end{subfigure}
 		% \caption{Pictures of animals}\label{fig:animals}
 	\end{figure}
-    \begin{itemize}
-    	\item Jagged Boundaries
-    	\item Missing cell interaction
-    	\item Weak illustration of cell growth
-    \end{itemize}
+%    \begin{itemize}
+%    	\item Jagged Boundaries
+%    	\item Missing cell interaction
+%    	\item Weak illustration of cell growth
+%    \end{itemize}
 	\tiny{$^1$ http://mathworld.wolfram.com/CellularAutomaton.html} \\
 	\tiny{$^2$ Y. Zhang et al., PLoS ONE 6(10): e24999. doi:10.1371/journal.pone.0024999, 2011}
 }
@@ -297,16 +297,16 @@
 	\frametitle{Soft packing: A novel phase field approach}
 	\begin{figure}[hbt]
 		\begin{center}
-			\includegraphics[width=0.8\textwidth]{figures2/phaseField12Cells.png}{}
+			\includegraphics[width=0.6\textwidth]{figures2/cellPackingCV16.png}{}
 		\end{center}
 	\end{figure}
 	%\vspace{-0.15in}
-	\begin{itemize}
-		\item Volume compaction strategy
-		\item Smooth anisotropic evolution
-		\item Non overlapping boundaries
-	\end{itemize}
-	\href{run:movies/phaseField12Cells.mp4}{\tiny Phase field simulation of soft packing}\\
+%	\begin{itemize}
+%		\item Volume compaction strategy
+%		\item Smooth anisotropic evolution
+%		\item Non overlapping boundaries
+%	\end{itemize}
+	\href{run:movies/constantVolume16cells.mpg}{\tiny Phase field simulation of soft packing}\\
 	\tiny{https://arxiv.org/abs/1806.01410}
 }
 
@@ -420,7 +420,7 @@ Kinetics:
 %%%Slide 5%%%
 
 \frame{
-	\frametitle{Results: Cell divisions and soft packing}
+	\frametitle{Results: Cell divisions and soft packing - Increasing Volume}
 	\begin{figure}[h!]
 		\centering
 		\begin{subfigure}[h!]{0.4\textwidth}
@@ -441,13 +441,40 @@ Kinetics:
 		\begin{subfigure}[h!]{0.4\textwidth}
 			\includegraphics[width=\textwidth]{figures2/twelvecell_2}
 			\caption*{Progression to twelve cells.}
-			\label{fig:twelvecell}
+			\label{fig:sixteencell}
 		\end{subfigure}
 	\end{figure}
 	\href{run:movies/twoCellsDivision.mp4}{Second division of cells.} \\
-	\href{run:movies/noMechanics12Cells.mp4}{Progression of cell division and packing with 12 cells.} 
+    \href{run:movies/noMechanics12Cells.mp4}{Progression of cell division and packing with 12 cells.} 
 }
 
+\frame{
+	\frametitle{Results: Cell divisions and soft packing - Constant Volume}
+	\begin{figure}[h!]
+		\centering
+		\begin{subfigure}[h!]{0.4\textwidth}
+			\includegraphics[width=0.7\textwidth]{figures2/onecellcv.png}
+			\caption*{Initial single circular cell}
+			\label{fig:onecellcv}
+		\end{subfigure}
+		\begin{subfigure}[h!]{0.4\textwidth}
+			\includegraphics[width=0.7\textwidth]{figures2/fourcellcv.png}
+			\caption*{Progression to four cells}
+			\label{fig:fourcellcv}
+		\end{subfigure}
+		\begin{subfigure}[h!]{0.4\textwidth}
+			\includegraphics[width=0.7\textwidth]{figures2/eighthcellcv.png}
+			\caption*{Progression to eight cells}
+			\label{fig:eightcellcv}
+		\end{subfigure}
+		\begin{subfigure}[h!]{0.4\textwidth}
+			\includegraphics[width=0.7\textwidth]{figures2/sixteencellcv.png}
+			\caption*{Progression to sixteen cells.}
+			\label{fig:sixteencellcv}
+		\end{subfigure}
+	\end{figure}
+    	\href{run:movies/constantVolume16Cells.mpg}{Progression of cell division and packing with 16 cells.} 
+}
 
 %%%Slide 6%%%
 
@@ -482,13 +509,14 @@ Kinetics:
 	\frametitle{Summary and look ahead}
 	\begin{itemize}
 		\setlength\itemsep{1em}
-		\item Developed a diffused interface based numerical framework for modeling growth and packing of cell aggregates. Salient features: \vspace{0.05in}
+		\item Demonstrated a diffused interface based numerical framework for modeling growth and packing of cell aggregates. This work is now published and referenced as: \\
+		\textit{J. Jiang, K. Garikipati, S. Rudraraju``A diffuse interface framework for modelling the evolution of multi-cell aggregates as a soft packing problem due to growth and division of cells'', Bulletin of Mathematical Biology , 2019.} \\
+		Salient features: \vspace{0.05in}
 		\begin{itemize}
 			\setlength\itemsep{1em}
 			\item No discreet interface evolving mechanisms like those employed in lattice, cell-centric and vertex dynamics models needed.
 			\item Time evolution occurs at realistic time scales controlled by the growth rate, or doubling time of the cells, and does not need equilibrations needed by other discrete models.
 			\item Many arbitrary cell shape can be represented without being limited to polygonal shapes or a jagged representation of the cell boundary.
-			\item Basic model for incorporating mechanics and material models of the underlying cytoskeletal network. 
 		\end{itemize}
 		\item Ongoing numerical work on incorporating (1) A material model in place of the shape model, (2) Active parameter tracking to allow for scaling independent of the number of cells. 
 		\item Key applications: (1) Soft packing in cells, (2) Patterning in embryogenesis, (3) Other problems involving cell aggregates like collective cell motion. 
