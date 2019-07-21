@@ -154,7 +154,7 @@
 	%$^3$ Oakland University, Michigan%%%
 	%\includegraphics[height=0.35\textheight]{figures/simulations/reflectedShellZoom2.png}
 }
-\date{Midwest Mechanics Graduate Symposium 2019\\ \vspace{.10cm} UW Madison,  March 10, 2019}
+\date{15th US National Congress on Computational Mechanics (USNCCM) \\ \vspace{.10cm} Austin,TX  July 29, 2019}
 %\author[The author]{\includegraphics[height=1cm,width=2cm]{figures/reflectedShellZoom.png}\\The Author}
 %start the show
 \begin{document}
@@ -376,6 +376,7 @@ Kinetics:
 	\label{equ:energy}
 	\end{align*}
 }
+
 \frame{
 	\frametitle{Variational formulation}
 	Taking the variational derivative with respect to $c_k$ yields
@@ -397,25 +398,24 @@ Kinetics:
 	\end{equation*}
 }
 
-%\frame{
-%	\frametitle{Variational formulation}
-%	Time discretization:
-%	\begin{align*}
-%	c^{n+1}_{k} &= c^{n}_{k} + \Delta t (M~\grad \cdot (\grad \mu^{n+1}_{k})+s_{k})\nonumber\\
-%	\text{where}\quad\mu^{n+1}_{k} &= {f^\prime}^ {n+1}(c_k) -  \kappa \Delta c^{n+1}_{k} + \sum_{l\ne k}2\lambda  c_k^{n+1} {c_l^{n+1}}^2
-%	\end{align*}\\
-%	\vspace{0.1in}
-%	Weak formulation:
-%	\begin{align*}
-%	\int\limits_{\Omega}   w c_k^{n+1} ~\text{d}V
-%	&= \int\limits_{\Omega}   (w  c_k^{n} - \grad w \cdot \Delta t M \grad \mu_k^{n+1} + w\Delta t s_k) ~\text{d}V\nonumber\\
-%	\int\limits_{\Omega}   w  \mu_{k}^{n+1}  ~\text{d}V 
-%	&=\int\limits_{\Omega}  (w  {f^\prime}^{n+1}(c_k) + \grad w \cdot \kappa \grad c_k^{n+1} ~dV + \int\limits_\Omega w \sum_{l\ne k}2\lambda  c_k^{n+1} {c_l^{n+1}}^2)  ~\text{d}V
-%	\end{align*}\\
-%	\vspace{0.2in}
-%	Implemented in the \textit{deal.II} finite element framework.
-%}
-%%%Slide 4%%%
+\frame{
+	\frametitle{Variational formulation}
+	Time discretization:
+	\begin{align*}
+	c^{n+1}_{k} &= c^{n}_{k} + \Delta t (M~\grad \cdot (\grad \mu^{n+1}_{k})+s_{k})\nonumber\\
+	\text{where}\quad\mu^{n+1}_{k} &= {f^\prime}^ {n+1}(c_k) -  \kappa \Delta c^{n+1}_{k} + \sum_{l\ne k}2\lambda  c_k^{n+1} {c_l^{n+1}}^2
+	\end{align*}\\
+	\vspace{0.1in}
+	Weak formulation:
+	\begin{align*}
+	\int\limits_{\Omega}   w c_k^{n+1} ~\text{d}V
+	&= \int\limits_{\Omega}   (w  c_k^{n} - \grad w \cdot \Delta t M \grad \mu_k^{n+1} + w\Delta t s_k) ~\text{d}V\nonumber\\
+	\int\limits_{\Omega}   w  \mu_{k}^{n+1}  ~\text{d}V 
+	&=\int\limits_{\Omega}  (w  {f^\prime}^{n+1}(c_k) + \grad w \cdot \kappa \grad c_k^{n+1} ~dV + \int\limits_\Omega w \sum_{l\ne k}2\lambda  c_k^{n+1} {c_l^{n+1}}^2)  ~\text{d}V
+	\end{align*}\\
+	\vspace{0.2in}
+	Implemented in the \textit{deal.II} finite element framework.
+}
 
 %%%Slide 5%%%
 
