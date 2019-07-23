@@ -419,6 +419,33 @@ Kinetics:
 %%%Slide 5%%%
 
 \frame{
+	\frametitle{Phase and Shape model: Basic treatment of mechanics}
+	Shape changes of a cell determined through the changes to the principle moment of inertia ($I^1$, $I^2$) of the cell:
+	\begin{equation*}
+	\Pi_{\text{MI}} = \sum_{i=1}^{\text{dim}}\delta^i ({I_i} ^\text{ref}-I_i)^2
+	\end{equation*}
+	where $I_1$ and $I_2$ are obtained from the Moment of Inertia tensor: 
+	\begin{equation*}
+	\bI[c] = 
+	\begin{bmatrix}
+	I_{11}[c] & I_{12}[c] \\
+	I_{21}[c] & I_{22}[c]
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	\int c \bar{X}_1^2 ~\text{d}V   & \int c\bar{X}_1 \bar{X}_2 ~\text{d}V\\
+	\int c\bar{X}_1 \bar{X}_2 ~\text{d}V & \int c\bar{X}_2^2 ~\text{d}V
+	\end{bmatrix}
+	\label{equ:MomentOfInertia}
+	\end{equation*}\\
+	\vspace{0.2in}
+	Modified free energy functional: 
+	\begin{align}
+	\Pi[\bc,\nabla\bc] &:= \int\limits_{\Omega} \left(\sum_{k=1}^{N} f(c_k) + \sum_{k=1}^{N} \frac{\kappa}{2}\vert\grad c_k\vert^2 + \sum_{l\ne k}\sum_{k=1}^{N}\lambda c_k^2 c_l^2 \right) ~\text{d}V\nonumber\\
+	&\phantom{+}+ \sum_{k=1}^{N}\sum_{i=1}^{\text{dim}}\delta_k^i ({I^k_i} ^\text{ref}-I^k_i)^2
+	\end{align}
+}
+\frame{
 	\frametitle{Results: Cell divisions and soft packing - Increasing Volume}
 	\begin{figure}[h!]
 		\centering
@@ -485,6 +512,13 @@ Kinetics:
 %	\end{figure}
 %}
 
+\frame{
+	\frametitle{Results: Cell divisions and soft packing}
+	Evolution of the phase field energy due to the division and packing processes. 
+	\begin{figure} 
+		\begin{center} \includegraphics[width=0.75\textwidth]{figures2/energyNoMechanics.png} \end{center} 
+	\end{figure}
+}
 %%%Slide 7%%%
 
 %\frame{
